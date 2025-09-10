@@ -1,216 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Perkenalan — Abiyyurasyiddhiya Ghulmy Pamungkas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqilah Callysta Abygail Febyan - About Me</title>
+
+  <!-- Font & Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    :root{
-      --bg:#0b0b0d;
-      --card:#111113;
-      --muted:#9a9aa0;
-      --accent:#ff6b6b;
-      --glass: rgba(255,255,255,0.03);
-      --radius:18px;
-      font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      color: #fff;
+      overflow-x: hidden;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,#050506 0%, #0b0b0d 100%);
-      color:#e8e8ea;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:36px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:16px;
+
+    /* Background bintang animasi */
+    .stars {
+      width: 2px;
+      height: 2px;
+      background: transparent;
+      box-shadow: 
+        100px 200px #fff, 300px 600px #fff,
+        500px 300px #fff, 700px 800px #fff,
+        900px 200px #fff, 1200px 500px #fff;
+      animation: animStar 60s linear infinite;
     }
-    .container{
-      max-width:980px;
-      width:100%;
-      display:grid;
-      grid-template-columns: 320px 1fr;
-      gap:24px;
-      align-items:start;
+    @keyframes animStar {
+      from { transform: translateY(0); }
+      to { transform: translateY(-2000px); }
     }
-    .card {
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:22px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.03);
+
+    .container {
+      max-width: 950px;
+      margin: auto;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
     }
-    .avatar{
-      width:100%;
-      border-radius:14px;
-      overflow:hidden;
-      background:var(--glass);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:12px;
+
+    /* Foto Profil */
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #ff9ff3;
+      box-shadow: 0 0 30px #ff9ff3;
+      margin: 20px auto;
+      display: block;
+      transition: transform 0.4s ease;
     }
-    .avatar img{ width:100%; height:auto; object-fit:cover; display:block; }
-    h1{ margin:12px 0 4px 0; font-size:22px; letter-spacing:0.2px;}
-    .subtitle{ color:var(--muted); margin:0 0 16px 0; font-size:13px;}
-    .pill{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding:8px 12px;
-      background:rgba(255,255,255,0.02);
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.02);
-      font-size:13px;
-      color:var(--muted);
-      margin-bottom:12px;
+    .profile-pic:hover {
+      transform: scale(1.15) rotate(8deg);
     }
-    .list {
-      margin-top:14px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 3.2em;
+      margin: 10px 0;
+      color: #ff9ff3;
+      text-shadow: 0 0 20px #ff6ec7;
+      animation: bounce 2s infinite;
     }
-    .item{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:12px;
-      background:rgba(255,255,255,0.02);
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.02);
-      font-size:14px;
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
-    .item small{ color:var(--muted); }
-    .intro{
-      padding:18px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      margin-bottom:16px;
-      line-height:1.5;
+
+    p.subtitle {
+      font-size: 1.3em;
+      color: #48dbfb;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease;
     }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(2, 1fr);
-      gap:16px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    .section{
-      background:var(--card);
-      padding:16px;
-      border-radius:14px;
-      border: 1px solid rgba(255,255,255,0.02);
-      min-height:120px;
+
+    /* Section besar */
+    .section {
+      background: rgba(255,255,255,0.08);
+      padding: 40px 30px;
+      margin: 35px 0;
+      border-radius: 25px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      font-size: 1.3em;
+      animation: fadeInUp 1.2s ease;
     }
-    .section h3{ margin:0 0 8px 0; font-size:16px; }
-    .section p{ margin:0; color:var(--muted); font-size:14px; }
-    .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
-    .chip{
-      padding:8px 10px;
-      background:rgba(255,255,255,0.02);
-      border-radius:10px;
-      font-size:13px;
-      color:var(--muted);
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    .footer-row{
-      margin-top:14px;
-      display:flex;
-      gap:12px;
-      align-items:center;
-      flex-wrap:wrap;
+
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #1dd1a1;
+      text-shadow: 0 0 12px #1dd1a1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .btn{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      padding:10px 14px;
-      border-radius:12px;
-      background:linear-gradient(90deg,var(--accent), #ff9a9a);
-      color:#111;
-      font-weight:600;
-      border:none;
-      cursor:pointer;
-      text-decoration:none;
+
+    .section p {
+      margin: 12px 0;
     }
-    @media (max-width:860px){
-      .container{ grid-template-columns:1fr; padding:12px; }
-      .grid{ grid-template-columns:1fr; }
+
+    .icon {
+      color: #ff9ff3;
     }
-    .muted { color:var(--muted); font-size:13px; }
-    .label { color:var(--muted); font-size:12px; }
-    .contact a{ color:var(--muted); text-decoration:none; }
+
+    /* Hobi */
+    .hobby-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .hobby-item {
+      background: rgba(255,255,255,0.15);
+      padding: 15px 20px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .hobby-item:hover {
+      transform: rotate(-5deg) scale(1.1);
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* Kontak */
+    .contact a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 15px 0;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+    .contact a:hover {
+      color: #ff9ff3;
+      transform: translateX(10px);
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1em;
+      color: #ccc;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <div class="stars"></div>
   <div class="container">
-    <!-- LEFT -->
-    <div class="card">
-      <div class="avatar" title="Foto Diri">
-        <img src="WhatsApp Image 2025-09-10 at 19.50.57.jpeg" alt="Foto Abiyyurasyiddhiya Ghulmy Pamungkas — Mahasiswa AI IPB" />
-      </div>
-      <h1 id="fullName">Abiyyurasyiddhiya Ghulmy Pamungkas</h1>
-      <p class="subtitle">Mahasiswa Ilmu Komputer / Kecerdasan Buatan — IPB University</p>
-      <div class="pill">
-        <span class="label">Status</span>
-        <strong style="margin-left:6px">Mahasiswa Aktif • IPB University</strong>
-      </div>
-      <div class="list">
-        <div class="item"><span class="label">NIM</span> <strong id="nim">M0405241065</strong></div>
-        <div class="item"><span class="label">Program Studi</span> <strong>Kecerdasan Buatan (AI)</strong></div>
-        <div class="item"><span class="label">Fakultas</span> <strong>Sekolah Sains Data, Matematika & Informatika</strong></div>
-        <div class="item"><span class="label">Proxy / Kelompok</span> <strong id="proxy">Euclid</strong></div>
-        <div class="item"><span class="label">Lokasi</span> <small>Bogor, Indonesia</small></div>
-      </div>
-      <!-- Kontak -->
-      <div style="margin-top:14px" class="muted">
-        <div class="label">Kontak</div>
-        <div class="footer-row contact" style="margin-top:8px">
-          <a href="mailto:abiyyu.rasyid16@gmail.com">abiyyu.rasyid16@gmail.com</a>
-          <span>•</span>
-          <a href="tel:+6289697316446">+62 896 9731 6446</a>
-        </div>
-      </div>
+    <img src="aqilah.jpg" alt="Foto Profil Aqilah" class="profile-pic">
+    <h1>Aqilah Callysta Abygail Febyan</h1>
+    <p class="subtitle">✨ Mahasiswa Artificial Intelligence - IPB University ✨</p>
 
-      <!-- Sosial -->
-      <div style="margin-top:14px" class="muted">
-        <div class="label">Sosial</div>
-        <div class="footer-row" style="margin-top:8px">
-          <a href="https://www.instagram.com/abiyyurasyd" target="_blank">Instagram</a>
-          <a href="https://www.linkedin.com/in/abiyyurasyiddhiya-ghulmy-pamungkas-694115324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </div>
-    <!-- RIGHT -->
-    <div>
-      <div class="intro card">
-        <p>
-          Hai! Aku <strong>Abiyyurasyiddhiya Ghulmy Pamungkas</strong>, mahasiswa Kecerdasan Buatan, Sekolah Sains Data, Matematika dan Informatika di IPB University. Aku tertarik pada pengembangan sistem berbasis AI, pemrograman, serta desain sistem. 
-        </p>
-      </div>
-      <div class="grid">
-        <div class="section">
-          <h3>Ingin Mendalami</h3>
-          <div class="chips">
-            <div class="chip">Python</div>
-            <div class="chip">Machine Learning</div>
-            <div class="chip">Data Science</div>
-            <div class="chip">HTML/CSS/JS</div>
-            <div class="chip">Git & GitHub</div>
-            <div class="chip">PyTorch / TensorFlow</div>
-          </div>
-        </div>
-        <div class="section">
-          <h3>Pendidikan</h3>
-          <p class="muted"><strong>IPB University</strong><br>Program Studi: Kecerdasan Buatan — S1 (Aktif)</p>
-        </div>
-        <div class="section">
-          <h3>Minat</h3>
-          <p class="muted">AI & Machine Learning, Pengembangan Produk, Musik, Film, Olahraga</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+    <!-- Data Diri -->
+    <div class="section">
+      <h2><i class="fa-solid fa-user icon"></i> Data Diri</h2>
+      <p><i class="fa-solid fa-id-card icon"></i><strong> NIM:</strong> M0405241073</p>
+      <p><i class="fa-solid fa-graduation-cap icon"></i><strong> Program Studi:</strong> Artificial Intelligence</p>
+      <p><i class="fa-solid fa-layer-group icon"></i><strong> Angkatan:</strong> 61</p>
+      <p><i class="fa-solid fa-users icon"></i><strong> Proxy:</strong> Jordan</p>
+      <p><i class="fa-solid fa-cake-candles icon"></i><strong> TTL:</strong> Tangerang Selatan, 16 April</p>
