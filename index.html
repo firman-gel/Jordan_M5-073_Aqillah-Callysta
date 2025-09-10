@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Perkenalan — Abiyyurasyiddhiya Ghulmy Pamungkas</title>
+  <style>
+    :root{
+      --bg:#0b0b0d;
+      --card:#111113;
+      --muted:#9a9aa0;
+      --accent:#ff6b6b;
+      --glass: rgba(255,255,255,0.03);
+      --radius:18px;
+      font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#050506 0%, #0b0b0d 100%);
+      color:#e8e8ea;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:16px;
+    }
+    .container{
+      max-width:980px;
+      width:100%;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:24px;
+      align-items:start;
+    }
+    .card {
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .avatar{
+      width:100%;
+      border-radius:14px;
+      overflow:hidden;
+      background:var(--glass);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+    }
+    .avatar img{ width:100%; height:auto; object-fit:cover; display:block; }
+    h1{ margin:12px 0 4px 0; font-size:22px; letter-spacing:0.2px;}
+    .subtitle{ color:var(--muted); margin:0 0 16px 0; font-size:13px;}
+    .pill{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 12px;
+      background:rgba(255,255,255,0.02);
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,0.02);
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:12px;
+    }
+    .list {
+      margin-top:14px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .item{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px;
+      background:rgba(255,255,255,0.02);
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.02);
+      font-size:14px;
+    }
+    .item small{ color:var(--muted); }
+    .intro{
+      padding:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      margin-bottom:16px;
+      line-height:1.5;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:16px;
+    }
+    .section{
+      background:var(--card);
+      padding:16px;
+      border-radius:14px;
+      border: 1px solid rgba(255,255,255,0.02);
+      min-height:120px;
+    }
+    .section h3{ margin:0 0 8px 0; font-size:16px; }
+    .section p{ margin:0; color:var(--muted); font-size:14px; }
+    .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .chip{
+      padding:8px 10px;
+      background:rgba(255,255,255,0.02);
+      border-radius:10px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .footer-row{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:12px;
+      background:linear-gradient(90deg,var(--accent), #ff9a9a);
+      color:#111;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      text-decoration:none;
+    }
+    @media (max-width:860px){
+      .container{ grid-template-columns:1fr; padding:12px; }
+      .grid{ grid-template-columns:1fr; }
+    }
+    .muted { color:var(--muted); font-size:13px; }
+    .label { color:var(--muted); font-size:12px; }
+    .contact a{ color:var(--muted); text-decoration:none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- LEFT -->
+    <div class="card">
+      <div class="avatar" title="Foto Diri">
+        <img src="WhatsApp Image 2025-09-10 at 19.50.57.jpeg" alt="Foto Abiyyurasyiddhiya Ghulmy Pamungkas — Mahasiswa AI IPB" />
+      </div>
+      <h1 id="fullName">Abiyyurasyiddhiya Ghulmy Pamungkas</h1>
+      <p class="subtitle">Mahasiswa Ilmu Komputer / Kecerdasan Buatan — IPB University</p>
+      <div class="pill">
+        <span class="label">Status</span>
+        <strong style="margin-left:6px">Mahasiswa Aktif • IPB University</strong>
+      </div>
+      <div class="list">
+        <div class="item"><span class="label">NIM</span> <strong id="nim">M0405241065</strong></div>
+        <div class="item"><span class="label">Program Studi</span> <strong>Kecerdasan Buatan (AI)</strong></div>
+        <div class="item"><span class="label">Fakultas</span> <strong>Sekolah Sains Data, Matematika & Informatika</strong></div>
+        <div class="item"><span class="label">Proxy / Kelompok</span> <strong id="proxy">Euclid</strong></div>
+        <div class="item"><span class="label">Lokasi</span> <small>Bogor, Indonesia</small></div>
+      </div>
+      <!-- Kontak -->
+      <div style="margin-top:14px" class="muted">
+        <div class="label">Kontak</div>
+        <div class="footer-row contact" style="margin-top:8px">
+          <a href="mailto:abiyyu.rasyid16@gmail.com">abiyyu.rasyid16@gmail.com</a>
+          <span>•</span>
+          <a href="tel:+6289697316446">+62 896 9731 6446</a>
+        </div>
+      </div>
+
+      <!-- Sosial -->
+      <div style="margin-top:14px" class="muted">
+        <div class="label">Sosial</div>
+        <div class="footer-row" style="margin-top:8px">
+          <a href="https://www.instagram.com/abiyyurasyd" target="_blank">Instagram</a>
+          <a href="https://www.linkedin.com/in/abiyyurasyiddhiya-ghulmy-pamungkas-694115324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT -->
+    <div>
+      <div class="intro card">
+        <p>
+          Hai! Aku <strong>Abiyyurasyiddhiya Ghulmy Pamungkas</strong>, mahasiswa Kecerdasan Buatan, Sekolah Sains Data, Matematika dan Informatika di IPB University. Aku tertarik pada pengembangan sistem berbasis AI, pemrograman, serta desain sistem. 
+        </p>
+      </div>
+      <div class="grid">
+        <div class="section">
+          <h3>Ingin Mendalami</h3>
+          <div class="chips">
+            <div class="chip">Python</div>
+            <div class="chip">Machine Learning</div>
+            <div class="chip">Data Science</div>
+            <div class="chip">HTML/CSS/JS</div>
+            <div class="chip">Git & GitHub</div>
+            <div class="chip">PyTorch / TensorFlow</div>
+          </div>
+        </div>
+        <div class="section">
+          <h3>Pendidikan</h3>
+          <p class="muted"><strong>IPB University</strong><br>Program Studi: Kecerdasan Buatan — S1 (Aktif)</p>
+        </div>
+        <div class="section">
+          <h3>Minat</h3>
+          <p class="muted">AI & Machine Learning, Pengembangan Produk, Musik, Film, Olahraga</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
